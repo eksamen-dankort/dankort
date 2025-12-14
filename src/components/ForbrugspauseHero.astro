@@ -1,0 +1,86 @@
+<section class="hero">
+
+    <h1 class="hero-title">
+        <span class="green-highlight">Forbrugspause</span> med Dankort
+      </h1>
+  
+    <p class="hero-subtitle">Lettere. Sjovere. Og meget mere grønt</p>
+  
+    <div class="hero-images">
+      <img src="/images/blad-logo.webp" alt="Grønt ikon" class="hero-icon" />
+  
+      <img
+        src="/images/phone-app.webp"
+        alt="Skærmbillede af Forbrugspause i appen"
+        class="hero-phone"
+      />
+    </div>
+  
+    <p class="hero-text">
+      Det skal være lettere og lidt sjovere at skrue ned for forbruget. Når du holder en
+      forbrugspause optjener du point i Dankort-appen, som kan bruges på diverse fordele.
+      På den måde sparer du både penge og gør noget godt for klimaet, uden at ændre hele
+      din hverdag.
+    </p>
+  </section>
+  
+  <style>
+    .hero {
+      background: var(--grey);
+      border-radius: 14px;
+      padding: 20px;
+      text-align: center;
+      max-width: 430px;
+      margin: 20px auto;
+    }
+  
+    .hero-title {
+      margin: 0 0 6px;
+      font-size: var(--h1);
+      font-weight: 700;
+      line-height: 1.15;
+    }
+  
+    .hero-subtitle {
+      margin: 0 0 14px;
+      font-size: 14px;
+    }
+  
+    /* Gør at billeder aldrig kan blive større end deres egne "width" regler */
+    .hero-icon,
+    .hero-phone {
+      display: block;
+      height: auto;
+      max-width: none; /* vigtigt hvis du har global img { max-width:100% } */
+    }
+  
+    .hero-images {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 10px 0 14px;
+    }
+  
+    /* LÅSTE størrelser på billeder */
+    .hero-icon {
+      width: 70px;
+    }
+  
+    .hero-phone {
+      width: 140px;
+    }
+  
+    .hero-text {
+      margin: 0;
+      font-size: var(--p);
+      line-height: 1.45;
+    }
+
+    .green-highlight {
+  background: var(--green);
+  padding: 0 6px;        
+  border-radius: 4px;   
+}
+  </style>
+  

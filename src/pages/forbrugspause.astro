@@ -1,0 +1,91 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ForbrugspauseHero from "../components/ForbrugspauseHero.astro";
+import WhyForbrugspause from "../components/WhyForbrugspause.astro";
+import HowForbrugspauseWorks from "../components/HowForbrugspauseWorks.astro"
+import Preview from "../components/Preview.astro"
+import GetStarted from "../components/GetStarted.astro"
+import CafeButton from "../components/CafeButton.astro"
+
+const res = await fetch("https://vhfeaaqjpnquzuwqkcqn.supabase.co/rest/v1/cafes?select=id,name", {
+  headers: {
+    apikey: "sb_publishable_TwTcczdp-s3B_-OdFvGRdw_t0GfJbwD",
+    Authorization: "Bearer sb_publishable_TwTcczdp-s3B_-OdFvGRdw_t0GfJbwD",
+  },
+});
+
+const cafes: any[] = await res.json();
+---
+
+<Layout title="Forbrugspause">
+  <ForbrugspauseHero />
+  <WhyForbrugspause />
+  <HowForbrugspauseWorks/>
+  <Preview/>
+  
+
+  
+  <section class="cafes-section">
+    <div class="cafes-intro">
+      <h2>Her kan du bruge dine point</h2>
+      <p>
+        Vi samarbejder med caféer, der deler vores ambition om at gøre hverdagen lidt grønnere.
+        Optjen point og indløs dem her:
+      </p>
+      <img src="/images/blad-logo.webp" alt="" class="cafes-intro-icon" />
+    </div>
+  
+    <div class="cafes-grid">
+      {cafes.map((cafe) => <CafeButton cafe={cafe} />)}
+    </div>
+  </section>
+  
+  <GetStarted/>
+  <style>
+    .cafes-section {
+  max-width: 430px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.cafes-intro {
+  background: var(--grey);
+  border-radius: 26px;
+  padding: 22px 18px;
+  text-align: center;
+}
+
+.cafes-intro h2 {
+  margin: 0 0 10px;
+  font-size: var(--h2);
+  font-weight: 700;
+}
+
+.cafes-intro p {
+  margin: 0;
+  font-size: var(--p);
+  line-height: 1.4;
+}
+
+.cafes-intro-icon {
+  display: block;
+  width: 70px;
+  height: auto;
+  margin: 18px auto 0;
+}
+    .cafes-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* mobil: 2 ved siden af hinanden */
+      gap: 40px;
+      margin-top: 20px;
+    }
+  
+    @media (min-width: 700px) {
+      .cafes-grid {
+        grid-template-columns: repeat(3, 1fr); /* desktop: 3 ved siden af hinanden */
+      }
+    }
+  </style>
+</Layout>
+
+  

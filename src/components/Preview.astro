@@ -1,0 +1,71 @@
+<section class="preview">
+    <p>Ikke helt overbevist endnu?</p>
+  
+    <h2>Få et smugkig på dine pointfordele</h2>
+  
+    <div class="preview-images">
+        <img src="/images/preview-bread.webp" alt="Brød-tilbud" class="img-left" />
+        <img src="/images/preview-coffee.webp" alt="Kaffe-tilbud" class="img-center" />
+        <img src="/images/preview-croissant.webp" alt="Croissant-tilbud" class="img-right" />
+      </div>
+    
+      <p>Særlige grønne tilbud kun til forbrugspause-brugere</p>
+    </section>  
+
+    <style>
+.preview {
+  max-width: 430px;
+  margin: 20px auto;
+  padding: 20px;
+  background: var(--green);
+  border-radius: 14px;
+  text-align: center;
+}
+
+.preview p {
+  margin: 0;
+  font-size: var(--p);
+}
+
+.preview h2 {
+  margin: 10px 0 16px;
+  font-size: var(--h2);
+}
+
+/* “Scenen” til billederne */
+.preview-images {
+  position: relative;
+  height: 260px;
+  margin: 16px 0;
+}
+
+.preview-images img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* kun op/ned */
+  display: block;
+  height: 160px;
+  width: auto;
+}
+
+/* Midterbillede: centreres helt og gøres større */
+.img-center {
+  left: 50%;
+  transform: translate(-50%, -50%); /* både x og y */
+  height: 200px;
+  z-index: 3;
+}
+
+/* Sidebilleder: “hæfter” til kanterne så de ikke gemmer sig bag midten */
+.img-left {
+  left: 20px;  /* justér evt. 0–20px */
+  z-index: 2;
+}
+
+.img-right {
+  right: 20px; /* justér evt. 0–20px */
+  left: auto;
+  z-index: 1;
+}
+
+    </style>
