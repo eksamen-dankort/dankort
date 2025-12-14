@@ -1,0 +1,22 @@
+---
+const { cafe } = Astro.props;
+---
+
+<a class="cafe-btn" href={`/cafes/${cafe.id}`}>
+  {cafe.name}
+</a>
+
+<style>
+  .cafe-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 18px 12px;
+    border-radius: 14px;
+    background: var(--grey);
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 700;
+  }
+</style>
