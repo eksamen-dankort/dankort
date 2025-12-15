@@ -108,4 +108,43 @@ h2{
     height: 60px;
     display: block;
   }
+
+
+  /* -------- DESKTOP -------- */
+@media (min-width: 700px) {
+  .how {
+    max-width: 1100px;
+    padding: 0;        /* ingen ekstra indryk */
+    margin: 24px auto 40px;
+  }
+
+  .how h2,
+  .how-card {
+    padding: 40px 48px; /* mere “luft” på desktop */
+  }
+
+  .how h2 {
+    margin-bottom: 18px;
+  }
+
+  .how-step {
+    grid-template-columns: 64px 1fr auto; /* mere plads til tal */
+    gap: 28px;
+    padding: 18px 0;
+  }
+
+  .how-number {
+    font-size: 72px;
+  }
+
+  .how-icon {
+    width: 84px;
+    height: 84px;
+  }
+
+  .how-arrow {
+    width: 64px;
+    height: 64px;
+  }
+}
   </style>
