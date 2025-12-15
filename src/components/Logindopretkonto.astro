@@ -1,0 +1,85 @@
+<section class="logind">
+  <h2 class="tekst">Tak, fordi du betaler med Dankort.</h2>
+  <p class="tekst">
+    Med Dankort betaler du billigt og sikkert og er med til at<br />
+    støtte både dansk erhvervsliv og grønne initiativer.
+  </p>
+  <p class="tekst">
+    Har du lyst til at få endnu bedre overblik over dine<br />
+    betalinger og forbrugspauser, kan du oprette en konto her
+  </p>
+  <button class="btn-rød">Log ind eller opret konto</button>
+</section>
+
+<style>
+  .logind {
+    background-color: var(--grey);
+    padding: 24px;
+    border-radius: 20px;
+    margin: 16px;
+    text-align: center;
+    margin: 20px;
+  }
+
+  .btn-rød {
+    background-color: var(--red);
+    color: var(--white);
+    border: 1px solid var(--black);
+    padding: 6px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 10px;
+    margin: 20px auto 0;
+    display: block;
+  }
+
+  .btn-rød:hover {
+    background-color: rgba(199, 0, 8, 1);
+  }
+
+  h2.tekst {
+    font-size: var(--h2);
+  }
+
+  p.tekst {
+    font-size: var(--p);
+  }
+
+  @media (min-width: 700px) {
+    .logind {
+      background-color: var(--grey);
+      padding: 24px;
+      max-width: 1000px;
+      border-radius: 20px;
+      margin-left: 170px;
+      margin-bottom: 100px;
+    }
+
+    .btn-rød {
+      background-color: var(--red);
+      color: var(--white);
+      border: 1px solid var(--black);
+      padding: 8px 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: var(--btn);
+      margin-left: 400px;
+    }
+
+    .btn-rød:hover {
+      background-color: rgba(199, 0, 8, 1);
+    }
+
+    h2.tekst {
+      font-size: var(--h2);
+    }
+
+    p.tekst {
+      font-size: var(--p);
+    }
+
+    .tekst {
+      text-align: center;
+    }
+  }
+</style>

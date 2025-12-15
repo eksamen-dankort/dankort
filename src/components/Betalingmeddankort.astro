@@ -1,0 +1,87 @@
+<section class="dankort">
+  <div class="tekst">
+    <h2>Tjek om du betaler med Dankort. Kig efter logoet.</h2>
+    <p>
+      Alle betalinger med Dankort udløser <br />donationer til Den Danske Naturfond<br /> - uanset om du betaler med kort,<br /> mobilen eller på nettet. Men betaler<br /> du egentlig med Dankort? Tjek dit <br />fysiske kort og din wallet på mobilen,<br
+      /> og kig efter Dankort logoet.
+    </p>
+    <button class="btn-rød">Følg vores donationer</button>
+  </div>
+
+  <div class="billede">
+    <img src="/public/images/kortogtelefon.webp" alt="Billede af fysisk Dankort og et Dankort i en mobil wallet" class="howto" />
+  </div>
+</section>
+
+<style>
+  .dankort {
+    padding: 24px;
+    margin: 20px;
+    margin-bottom: 50px;
+  }
+  .billede {
+    /*Centrerer billedet i mobilvisning*/
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .howto {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin-top: 20px;
+  }
+
+  .tekst h2 {
+    font-size: var(--h2);
+  }
+
+  .tekst p {
+    font-size: var(--p);
+  }
+
+  .btn-rød {
+    background-color: var(--red);
+    color: var(--white);
+    border: 1px solid var(--black);
+    padding: 6px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: var(--btn);
+  }
+
+  .btn-rød:hover {
+    background-color: rgba(199, 0, 8, 1);
+  }
+
+  @media (min-width: 700px) {
+    .dankort {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 50px;
+      padding: 50px;
+      max-width: 1000px;
+      margin: 0 auto;
+      margin-bottom: 80px;
+    }
+
+    .howto {
+      max-width: 100%;
+      padding-top: 20px;
+    }
+
+    .tekst h2 {
+      font-size: var(--h2);
+    }
+
+    .tekst p {
+      font-size: var(--p);
+    }
+
+    .btn-rød {
+      font-size: var(--btn);
+    }
+  }
+</style>
