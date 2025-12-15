@@ -17,14 +17,15 @@
       <a href="#">Erhverv</a>
       <a href="#">Privat</a>
       <a href="#">Dankort Øremærket</a>
-      <a href="#" class="green-highlight">Forbrugspause</a>
+      <a href="/forbrugspause" class="green-highlight">Forbrugspause</a>
+      <a href="/forms"> <img class="account" src="/public/images/account.svg" alt=""></a>
     </nav>
   </div>
 </header>
 
 <style>
   .header {
-    background: rgb(235, 235, 235);
+    background:var(--grey);
     padding: 20px 30px;
   }
 
@@ -35,7 +36,10 @@
   }
 
   .header-logo {
-    width: 65px;
+    width: 50px;
+  }
+  .account{
+    width: 20px;
   }
 
   /*Burgermenu*/
@@ -63,7 +67,7 @@
     }
 
     .header-logo {
-      width: 100px;
+      max-width: 50px;
     }
 
     .burgermenu {
