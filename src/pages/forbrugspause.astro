@@ -41,6 +41,7 @@ const cafes: any[] = await res.json();
   </section>
   
   <GetStarted/>
+</Layout>
   <style>
     .cafes-section {
   max-width: 430px;
@@ -85,7 +86,21 @@ const cafes: any[] = await res.json();
         grid-template-columns: repeat(3, 1fr); /* desktop: 3 ved siden af hinanden */
       }
     }
+
+
+    @media (min-width: 900px) {
+  .cafes-section {
+    max-width: 1100px;  /* flugt med de andre */
+    padding: 0;         /* ingen ekstra indryk */
+    margin: 24px auto 40px;
+  }
+
+  .cafes-intro {
+    padding: 40px 48px; /* mere luft på desktop */
+  }
+
+}
   </style>
-</Layout>
+
 
   
