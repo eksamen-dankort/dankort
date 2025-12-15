@@ -1,8 +1,104 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Dankort from "../components/Dankort.astro";
+import Forbrugspause from "../components/Forbrugspause.astro";
+import Green from "../components/Green.astro";
+import Betalingmeddankort from "../components/Betalingmeddankort.astro";
+import Logindopretkonto from "../components/Logindopretkonto.astro";
 ---
 
 <Layout>
-  <h1>Forside</h1>
   <a href="/forbrugspause">Gå til Forbrugspause</a>
+  <Dankort />
+  <section class="billeder">
+    <div class="billedeet">
+      <img src="/public/images/b1.webp" alt="Billede af Kiosken med person på cykel" />
+    </div>
+    <div class="billedeto">
+      <img src="/public/images/b2.webp" alt="Billede af to kopper kaffe med latte-art" />
+    </div>
+    <div class="billedetre">
+      <img src="/public/images/b3.webp" alt="Billede af en grillet sandwich" />
+    </div>
+  </section>
+  <Forbrugspause />
+  <Green />
+  <Betalingmeddankort />
+  <Logindopretkonto />
 </Layout>
+
+<style>
+  .billeder {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    max-width: 1090px;
+    margin: 0 auto;
+    padding: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .billedeet, /* Kiosk */
+.billedeto, /* Kaffe */
+.billedetre {
+    /* Sandwich */
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .billedeto {
+    grid-column: 1 / 2;
+    aspect-ratio: 1 / 1;
+  }
+
+  .billedetre {
+    grid-column: 2 / 3;
+    aspect-ratio: 1 / 1;
+  }
+
+  /*Skal fylde hele bredden over de to små*/
+  .billedeet {
+    grid-column: 1 / 3;
+    aspect-ratio: 16 / 10;
+  }
+
+  .billedeet img,
+  .billedeto img,
+  .billedetre img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*Gør at billederne tilpasser sig, og ikke bliver sammenpresset*/
+  }
+
+  @media (min-width: 700px) {
+    .billeder {
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 15px;
+      height: 600px;
+      margin-bottom: 100px;
+    }
+
+    .billedeet {
+      grid-column: 1 / 2;
+      grid-row: 1 / 3;
+      /*Gør så billedet fylder den tildelte plads*/
+      aspect-ratio: initial;
+    }
+
+    .billedeto {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+      /*Gør så billedet fylder den tildelte plads*/
+      aspect-ratio: initial;
+    }
+
+    .billedetre {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      /*Gør så billedet fylder den tildelte plads*/
+      aspect-ratio: initial;
+    }
+  }
+</style>

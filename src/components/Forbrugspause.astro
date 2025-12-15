@@ -1,0 +1,161 @@
+<section class="forbrugspause">
+  <div class="tekst-kolonne">
+    <h2><span class="highlight">Forbrugspause</span> med Dankort</h2>
+
+    <p class="sub">Tag en pause og optjen point.</p>
+
+    <p>Hent Dankort appen, hvor du optjener point, hver gang du tager en forbrugspause og bliver belønnet.</p>
+
+    <img src="/public/images/blad-logo.webp" alt="Grønt ikon" class="icon" />
+
+    <p class="bundtekst">Hent appen nu og gør Danmark grønnere med Dankort</p>
+
+    <button class="btn">Se hvordan</button>
+  </div>
+
+  <div class="telefon-kolonne">
+    <img src="/public/images/phone-app.webp" alt="Telefon" class="telefon" />
+  </div>
+</section>
+
+<style>
+  .forbrugspause {
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 20px;
+    max-width: 400px;
+    background-color: var(--grey);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .tekst-kolonne {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tekst-kolonne h2 {
+    font-size: var(--h2);
+    margin-bottom: 15px;
+  }
+
+  .sub {
+    font-size: 15px;
+  }
+  .tekst-kolonne p {
+    font-size: var(--p);
+    line-height: 1.5;
+    margin: 10px 0;
+  }
+
+  .highlight {
+    background-color: var(--green);
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+
+  .icon {
+    max-width: 100px;
+  }
+
+  .bundtekst {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    padding: 8px 20px;
+    background-color: var(--white);
+    border: 1px solid var(--black);
+    border-radius: 10px;
+    font-size: var(--btn);
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+  .btn:hover {
+    background-color: var(--green);
+  }
+
+  .telefon-kolonne {
+    display: flex;
+    justify-content: center;
+  }
+
+  .telefon {
+    max-width: 280px;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+
+  @media (min-width: 700px) {
+    .forbrugspause {
+      background-color: var(--grey);
+      padding: 60px;
+      border-radius: 20px;
+      max-width: 1000px;
+      margin: 40px auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      margin-bottom: 100px;
+    }
+
+    .tekst-kolonne h2 {
+      font-size: var(--h2);
+      margin-bottom: 20px;
+    }
+
+    .highlight {
+      background-color: var(--green);
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+
+    .sub {
+      font-size: 30px;
+    }
+    .tekst-kolonne p {
+      font-size: var(--p);
+      line-height: 1.5;
+      max-width: 420px;
+    }
+
+    .icon {
+      max-width: 150px;
+      margin: 40px 0;
+    }
+
+    .bundtekst {
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      padding: 10px 80px;
+      background-color: var(--white);
+      border: 1px solid var(--black);
+      border-radius: 10px;
+      font-size: var(--btn);
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: var(--green);
+    }
+
+    .telefon-kolonne {
+      display: flex;
+      justify-content: center;
+    }
+
+    .telefon {
+      max-width: 320px;
+      border-radius: 20px;
+    }
+  }
+</style>

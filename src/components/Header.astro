@@ -1,90 +1,94 @@
- <header class="header">
-      <div class="header-container">
-        <!-- Logo (samme til mobil & desktop) -->
-        <a href="/">
-          <img src="/images/logo.webp" alt="Logo" class="header-logo" />
-        </a>
-  
-        <!-- Burgermenu - vises kun på mobil -->
-        <div class="burgermenu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-  
-        <!-- Desktop navigation (skjult på mobil) -->
-        <nav class="nav">
-          <a href="#">Erhverv</a>
-          <a href="#">Privat</a>
-          <a href="#">Dankort Øremærket</a>
-          <a href="#" class="green-highlight">Forbrugspause</a>
-        </nav>
-      </div>
-    </header>
-  
-    <style>.header {
-      background: rgb(235, 235, 235);
-      padding: 20px 30px;
-    }
-    
-    .header-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    
-    .header-logo {
-      width: 65px;
-    }
-    
-    /*Burgermenu*/
-    .burgermenu {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      cursor: pointer;
-    }
-    
-    .burgermenu span {
-      width: 32px;
-      height: 3px;
-      background:var(--black);
-      border-radius: 2px;
-    }
-    
-    /*Bliver først synlig i desktop (det er navigationen i header*/
-    .nav {
-      display: none;
-    }
-    @media(min-width:700px){ .header {
-    padding: 15px 40px;
+<header class="header">
+  <div class="header-container">
+    <!-- Logo (samme til mobil & desktop) -->
+    <a href="/">
+      <img src="/images/logo.webp" alt="Logo" class="header-logo" />
+    </a>
+
+    <!-- Burgermenu - vises kun på mobil -->
+    <div class="burgermenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Desktop navigation (skjult på mobil) -->
+    <nav class="nav">
+      <a href="#">Erhverv</a>
+      <a href="#">Privat</a>
+      <a href="#">Dankort Øremærket</a>
+      <a href="#" class="green-highlight">Forbrugspause</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .header {
+    background: rgb(235, 235, 235);
+    padding: 20px 30px;
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .header-logo {
-    width: 100px;
+    width: 65px;
   }
 
+  /*Burgermenu*/
   .burgermenu {
-    display: none; /*Burgermenuen bliver gemt når den er i desktop*/
-  }
-
-  .nav {
     display: flex;
-    gap: 25px;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
   }
 
-  .nav a {
-    text-decoration: none;
-    color: black;
-    font-size: 15px;
+  .burgermenu span {
+    width: 32px;
+    height: 3px;
+    background: var(--black);
+    border-radius: 2px;
   }
 
-  .green-highlight {
-  background: var(--green);
-  padding: 2px 6px;
-  border-radius: 4px;
-}
-        
+  /*Bliver først synlig i desktop (det er navigationen i header*/
+  .nav {
+    display: none;
+  }
+  @media (min-width: 700px) {
+    .header {
+      padding: 15px 40px;
     }
-    </style>
 
+    .header-logo {
+      width: 100px;
+    }
+
+    .burgermenu {
+      display: none; /*Burgermenuen bliver gemt når den er i desktop*/
+    }
+
+    .nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: black;
+      font-size: 15px;
+    }
+
+    .nav a:hover {
+      text-decoration: underline;
+    }
+
+    .green-highlight {
+      background: var(--green);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+  }
+</style>

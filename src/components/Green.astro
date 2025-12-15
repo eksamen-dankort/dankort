@@ -1,0 +1,123 @@
+<section class="øremærket">
+  <div class="billede">
+    <img src="/public/images/green.webp" alt="Natur billede" />
+
+    <div class="billedtekst">Dankort Øremærket</div>
+  </div>
+
+  <p class="donationtekst">Vi donerer 1 øre til Den Danske Naturfond, hver gang der betales med Dankort.</p>
+
+  <button class="donationbtn">Følg vores donationer</button>
+</section>
+
+<style>
+  .øremærket {
+    background-color: var(--green);
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 1000px;
+    margin: 40px auto;
+    margin: 20px;
+    margin-bottom: 30px;
+  }
+
+  .billede {
+    position: relative; /*Gør så teksten er ovenpå billedet*/
+  }
+
+  /*Selve billedet*/
+  .billede img {
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  /*Tekst ovenpå billedet*/
+  .billedtekst {
+    position: absolute;
+    top: 20px;
+    right: -10px;
+    margin-top: -40px;
+    background-color: var(--green);
+    padding: 20px 28px;
+    border-radius: 60px 60px 60px 60px;
+    font-size: var(--h2);
+    font-weight: bold;
+  }
+
+  /*Teksten under billedet*/
+  .donationtekst {
+    margin-top: 30px;
+    font-size: var(--p);
+  }
+
+  /*Knap*/
+  .donationbtn {
+    margin-top: 20px;
+    padding: 8px 22px;
+    background-color: var(--white);
+    border: 1px solid var(--black);
+    border-radius: 10px;
+    font-size: var(--btn);
+    cursor: pointer;
+  }
+
+  /*Hover-effekt*/
+  .donationbtn:hover {
+    background-color: #f0f0f0;
+  }
+
+  @media (min-width: 700px) {
+    .øremærket {
+      background-color: var(--green);
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 1000px;
+      margin: 40px auto;
+    }
+
+    .billede {
+      position: relative; /*Gør så teksten er ovenpå billedet*/
+    }
+
+    /*Selve billedet*/
+    .billede img {
+      width: 100%;
+      border-radius: 20px;
+    }
+
+    /*Tekst ovenpå billedet*/
+    .billedtekst {
+      position: absolute;
+      top: 20px;
+      right: -10px;
+      margin-top: -40px;
+      background-color: var(--green);
+      padding: 20px 28px;
+      border-radius: 60px 60px 60px 60px;
+      font-size: var(--h2);
+      font-weight: bold;
+    }
+
+    /*Teksten under billedet*/
+    .donationtekst {
+      margin-top: 30px;
+      font-size: var(--p);
+    }
+
+    /*Knap*/
+    .donationbtn {
+      margin-top: 20px;
+      padding: 10px 22px;
+      background-color: var(--white);
+      border: 1px solid var(--black);
+      border-radius: 20px;
+      font-size: var(--btn);
+      cursor: pointer;
+    }
+
+    /*Hover-effekt*/
+    .donationbtn:hover {
+      background-color: #f0f0f0;
+    }
+  }
+</style>
