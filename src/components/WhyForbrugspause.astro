@@ -44,4 +44,30 @@
       font-size: var(--p);
       line-height: 1.45;
     }
+
+    /*DESKTOP*/
+    @media (min-width: 700px) {
+  .why {
+    max-width: 1100px;  
+    padding: 0;        
+    margin: 24px auto 40px;
+    
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    column-gap: 28px;
+    align-items: center;
+  }
+
+  .why-question {
+    margin: 0;
+    font-size: 140px;
+    line-height: 1;
+    text-align: center;
+  }
+
+  .why-box {
+    width: 100%;         /* sikrer at boksen går helt ud til kanten */
+    padding: 32px;
+  }
+}
   </style>
