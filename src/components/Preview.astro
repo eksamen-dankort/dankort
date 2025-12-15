@@ -4,9 +4,8 @@
     <h2>Få et smugkig på dine pointfordele</h2>
   
     <div class="preview-images">
-        <img src="/images/preview-bread.webp" alt="Brød-tilbud" class="img-left" />
-        <img src="/images/preview-coffee.webp" alt="Kaffe-tilbud" class="img-center" />
-        <img src="/images/preview-croissant.webp" alt="Croissant-tilbud" class="img-right" />
+        <img src="/images/carousel.webp" alt="kaffe"/>
+
       </div>
     
       <p>Særlige grønne tilbud kun til forbrugspause-brugere</p>
@@ -32,40 +31,34 @@
   font-size: var(--h2);
 }
 
-/* “Scenen” til billederne */
+/* “Scenen” til billedet */
 .preview-images {
-  position: relative;
-  height: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 16px 0;
 }
 
+/* billedet */
 .preview-images img {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%); /* kun op/ned */
+  position: static;   
+  transform: none;     
   display: block;
-  height: 160px;
-  width: auto;
+  max-width: 100%;
+  height: auto;
 }
 
-/* Midterbillede: centreres helt og gøres større */
-.img-center {
-  left: 50%;
-  transform: translate(-50%, -50%); /* både x og y */
-  height: 200px;
-  z-index: 3;
-}
 
-/* Sidebilleder: “hæfter” til kanterne så de ikke gemmer sig bag midten */
-.img-left {
-  left: 20px;  /* justér evt. 0–20px */
-  z-index: 2;
-}
+@media (min-width: 700px) {
+  .preview {
+    max-width: 1100px;  
+    margin: 24px auto 40px;
+    padding: 40px 48px; 
+  }
 
-.img-right {
-  right: 20px; /* justér evt. 0–20px */
-  left: auto;
-  z-index: 1;
+  .preview-images img {
+    max-width: 900px;   
+    width: 100%;
+  }
 }
-
     </style>
