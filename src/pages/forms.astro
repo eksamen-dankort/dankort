@@ -3,6 +3,13 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
+  <nav class="breadcrumb">
+    <a href="/">Forside</a>
+    <span>></span>
+    <a href="/forbrugspause">Forbrugspause</a>
+    <span>></span>
+    <a href="/forms">Forms</a>
+  </nav>
   <div class="container">
     <div class="tekst">
       <h1>
@@ -16,7 +23,6 @@ import Layout from "../layouts/Layout.astro";
     </div>
 
     <div class="felt">
-      <!-- LOGIN -->
       <div class="left">
         <h2>Login</h2>
 
@@ -25,7 +31,7 @@ import Layout from "../layouts/Layout.astro";
 
         <div class="options">
           <label><input type="checkbox" /> Husk mig</label>
-          <a>Glemt kodeord?</a>
+          <a href="#" class="kodeord">Glemt kodeord?</a>
         </div>
 
         <button class="btn-green">Login</button>
@@ -33,13 +39,20 @@ import Layout from "../layouts/Layout.astro";
         <p class="account">or use your account</p>
 
         <div class="socials">
-          <span>@</span>
-          <span>📷</span>
-          <span>📞</span>
+          <span class="icon">
+            <img src="/images/maillogo.svg" alt="Email" />
+          </span>
+
+          <span class="icon">
+            <img src="/images/inlogo.svg" alt="Linkedin" />
+          </span>
+
+          <span class="icon">
+            <img src="/images/phonelogo.svg" alt="Telefon" />
+          </span>
         </div>
       </div>
 
-      <!-- OPRET -->
       <div class="right">
         <h2>
           Start din rejse,<br />
@@ -57,6 +70,22 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <style>
+  .breadcrumb {
+    font-size: 15px;
+    gap: 5px;
+    margin-left: 50px;
+    margin-top: 30px;
+  }
+
+  .breadcrumb a {
+    color: var(--black);
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover {
+    text-decoration: underline;
+  }
+
   .container {
     max-width: 400px;
     margin: 40px auto;
@@ -70,12 +99,12 @@ import Layout from "../layouts/Layout.astro";
   }
 
   .tekst h1 {
-    font-size: 20px;
+    font-size: var(--h1);
     margin-bottom: 20px;
   }
 
   .tekst p {
-    font-size: 12.5px;
+    font-size: var(--p);
     margin-bottom: 30px;
   }
 
@@ -85,9 +114,8 @@ import Layout from "../layouts/Layout.astro";
     border-radius: 4px;
   }
 
-  /*Login & Opret*/
   .felt {
-    background: white;
+    background: var(--white);
     border-radius: 20px;
     overflow: hidden;
   }
@@ -98,7 +126,7 @@ import Layout from "../layouts/Layout.astro";
   }
 
   .left h2 {
-    font-size: 18px;
+    font-size: var(--h2);
     margin-bottom: 25px;
   }
 
@@ -118,12 +146,17 @@ import Layout from "../layouts/Layout.astro";
     font-size: 10px;
   }
 
+  a {
+    text-decoration: none;
+    color: var(--black);
+  }
+
   .btn-green {
     margin-top: 20px;
     padding: 12px;
     border: none;
     border-radius: 10px;
-    background-color: rgb(202, 229, 164);
+    background-color: var(--green);
     cursor: pointer;
     width: 100%;
   }
@@ -149,35 +182,40 @@ import Layout from "../layouts/Layout.astro";
     width: 42px;
     height: 42px;
     border-radius: 50%;
-    border: 1px solid rgb(226, 30, 38);
-    color: rgb(226, 30, 38);
+    border: 1px solid var(--red);
     margin: 0 6px;
     font-weight: bold;
     cursor: pointer;
   }
 
-  /*Opret*/
+  .socials span img {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+    display: block;
+  }
+
   .right {
-    background: rgb(226, 30, 38);
-    color: white;
+    background: var(--red);
+    color: var(--white);
     padding: 50px 30px;
     text-align: center;
   }
 
   .right h2 {
-    font-size: 18px;
+    font-size: var(--h2);
     margin-bottom: 20px;
   }
 
   .right p {
-    font-size: 12.5px;
+    font-size: var(--p);
     margin-bottom: 40px;
     line-height: 1.5;
   }
 
   .btn-white {
-    background: white;
-    color: black;
+    background: var(--white);
+    color: var(--black);
     border: none;
     padding: 12px;
     border-radius: 12px;
@@ -199,16 +237,15 @@ import Layout from "../layouts/Layout.astro";
     }
 
     .tekst h1 {
-      font-size: 40px;
+      font-size: var(--h1);
       margin-bottom: 20px;
     }
 
     .tekst p {
-      font-size: 24px;
+      font-size: var(--p);
       margin-bottom: 70px;
     }
 
-    /*Login & Opret*/
     .felt {
       display: flex;
     }
@@ -221,12 +258,12 @@ import Layout from "../layouts/Layout.astro";
 
     .left h2,
     .right h2 {
-      font-size: 30px;
+      font-size: var(--h2);
       margin-bottom: 10px;
     }
 
     .right p {
-      font-size: 24px;
+      font-size: var(--p);
     }
 
     .input {

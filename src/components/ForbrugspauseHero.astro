@@ -27,7 +27,6 @@
     margin: 20px auto;
     margin-top: 50px;
 
-    /* gør det nemt at flytte elementer på desktop */
     display: grid;
     grid-template-columns: 1fr;
   }
@@ -59,7 +58,6 @@
     margin: 10px 0 14px;
   }
 
-  /* Mobil størrelser */
   .hero-icon {
     width: 70px;
   }
@@ -80,7 +78,6 @@
     border-radius: 4px;
   }
 
-  /* DESKTOP  */
   @media (min-width: 700px) {
     .hero {
       max-width: 1000px;
@@ -94,7 +91,6 @@
       border-radius: 20px;
     }
 
-    /* Venstre kolonne */
     .hero-title,
     .hero-subtitle,
     .hero-text {
@@ -104,22 +100,22 @@
     .hero-subtitle {
       font-size: 35px;
       margin-bottom: 18px;
+      margin-top: -70px;
     }
 
     .hero-text {
       max-width: 60ch;
+      margin-top: -60px;
     }
 
-    /* Højre kolonne (billeder) */
     .hero-images {
       grid-column: 2;
-      grid-row: 1 / span 3; /* gør at billederne ligger “hele vejen oppe” ved siden af teksten */
+      grid-row: 1 / span 3;
       justify-content: flex-end;
       margin: 0;
       gap: 28px;
     }
 
-    /* Desktop størrelser */
     .hero-icon {
       width: clamp(90px, 10vw, 130px);
     }

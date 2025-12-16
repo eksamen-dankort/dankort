@@ -1,18 +1,23 @@
 <header class="header">
   <div class="header-container">
-    <!-- Logo (samme til mobil & desktop) -->
     <a href="/">
       <img src="/images/logo.webp" alt="Logo" class="header-logo" />
     </a>
 
-    <!-- Burgermenu - vises kun på mobil -->
-    <div class="burgermenu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+    <details class="dropdown">
+      <summary class="dropdown-btn">
+        <img src="/public/images/menulogo.svg" alt="Menu" />
+      </summary>
 
-    <!-- Desktop navigation (skjult på mobil) -->
+      <ul class="dropdown-menu">
+        <li><a href="/">Erhverv</a></li>
+        <li><a href="/">Privat</a></li>
+        <li><a href="/">Dankort øremærket</a></li>
+        <li><a href="/forbrugspause">Forbrugspause</a></li>
+        <li><a href="/forms">Min profil</a></li>
+      </ul>
+    </details>
+
     <nav class="nav">
       <a href="/">Erhverv</a>
       <a href="/">Privat</a>
@@ -24,6 +29,45 @@
 </header>
 
 <style>
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-btn img {
+    width: 28px;
+    height: auto;
+    display: block;
+  }
+
+  .dropdown-btn {
+    list-style: none;
+    cursor: pointer;
+    width: 50%;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    min-width: 200px;
+    padding: 8px 0;
+    list-style: none;
+    right: 0;
+  }
+
+  .dropdown-menu a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: black;
+  }
+
+  .dropdown-menu a:hover {
+    text-decoration: underline;
+  }
+
   .header {
     background: var(--grey);
     padding: 20px 30px;
@@ -42,22 +86,6 @@
     width: 20px;
   }
 
-  /*Burgermenu*/
-  .burgermenu {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    cursor: pointer;
-  }
-
-  .burgermenu span {
-    width: 32px;
-    height: 3px;
-    background: var(--black);
-    border-radius: 2px;
-  }
-
-  /*Bliver først synlig i desktop (det er navigationen i header*/
   .nav {
     display: none;
   }
@@ -70,8 +98,8 @@
       max-width: 50px;
     }
 
-    .burgermenu {
-      display: none; /*Burgermenuen bliver gemt når den er i desktop*/
+    .dropdown {
+      display: none;
     }
 
     .nav {
