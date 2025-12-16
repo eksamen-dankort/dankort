@@ -56,7 +56,6 @@ import Logindopretkonto from "../components/Logindopretkonto.astro";
     aspect-ratio: 1 / 1;
   }
 
-  /*Skal fylde hele bredden over de to små*/
   .billedeet {
     grid-column: 1 / 3;
     aspect-ratio: 16 / 10;
@@ -67,7 +66,7 @@ import Logindopretkonto from "../components/Logindopretkonto.astro";
   .billedetre img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /*Gør at billederne tilpasser sig, og ikke bliver sammenpresset*/
+    object-fit: cover;
   }
 
   @media (min-width: 700px) {
@@ -90,21 +89,18 @@ import Logindopretkonto from "../components/Logindopretkonto.astro";
     .billedeet {
       grid-column: 1 / 2;
       grid-row: 1 / 3;
-      /*Gør så billedet fylder den tildelte plads*/
       aspect-ratio: initial;
     }
 
     .billedeto {
       grid-column: 2 / 3;
       grid-row: 1 / 2;
-      /*Gør så billedet fylder den tildelte plads*/
       aspect-ratio: initial;
     }
 
     .billedetre {
       grid-column: 2 / 3;
       grid-row: 2 / 3;
-      /*Gør så billedet fylder den tildelte plads*/
       aspect-ratio: initial;
     }
   }

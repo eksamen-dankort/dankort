@@ -18,6 +18,11 @@ const cafes: any[] = await res.json();
 ---
 
 <Layout title="Forbrugspause">
+  <nav class="breadcrumb">
+    <a href="/">Forside</a>
+    <span>></span>
+    <a href="/forbrugspause">Forbrugspause</a>
+  </nav>
   <ForbrugspauseHero />
   <WhyForbrugspause />
   <HowForbrugspauseWorks />
@@ -38,6 +43,22 @@ const cafes: any[] = await res.json();
   <GetStarted />
 </Layout>
 <style>
+  .breadcrumb {
+    font-size: 15px;
+    gap: 5px;
+    margin-left: 50px;
+    margin-top: 30px;
+  }
+
+  .breadcrumb a {
+    color: var(--black);
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover {
+    text-decoration: underline;
+  }
+
   .cafes-section {
     max-width: 470px;
     margin: 20px auto;
@@ -71,20 +92,20 @@ const cafes: any[] = await res.json();
   }
   .cafes-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* mobil: 2 ved siden af hinanden */
+    grid-template-columns: repeat(2, 1fr);
     gap: 40px;
     margin-top: 20px;
   }
 
   @media (min-width: 700px) {
     .cafes-section {
-      max-width: 1100px; /* flugt med de andre */
-      padding: 0; /* ingen ekstra indryk */
+      max-width: 1100px;
+      padding: 0;
       margin: 24px auto 40px;
     }
 
     .cafes-intro {
-      padding: 40px 48px; /* mere luft på desktop */
+      padding: 40px 48px;
       border-radius: 20px;
     }
   }
