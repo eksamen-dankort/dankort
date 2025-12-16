@@ -55,13 +55,14 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </div>
 </Layout>
+
 <style>
   .container {
     max-width: 400px;
     margin: 40px auto;
     padding: 20px;
     background-color: var(--grey);
-    border-radius: 15px;
+    border-radius: 10px;
   }
 
   .tekst {
@@ -127,6 +128,10 @@ import Layout from "../layouts/Layout.astro";
     width: 100%;
   }
 
+  .btn-green:hover {
+    background-color: #b8d391;
+  }
+
   .account {
     margin-top: 50px;
     font-size: 10px;
@@ -180,9 +185,13 @@ import Layout from "../layouts/Layout.astro";
     width: 100%;
   }
 
+  .btn-white:hover {
+    background-color: var(--grey);
+  }
+
   @media (min-width: 700px) {
     .container {
-      max-width: 1200px;
+      max-width: 1000px;
       padding: 40px;
       margin-top: 100px;
       margin-bottom: 100px;

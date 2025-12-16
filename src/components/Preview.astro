@@ -1,64 +1,63 @@
 <section class="preview">
-    <p>Ikke helt overbevist endnu?</p>
-  
-    <h2>Få et smugkig på dine pointfordele</h2>
-  
-    <div class="preview-images">
-        <img src="/images/carousel.webp" alt="kaffe"/>
+  <p>Ikke helt overbevist endnu?</p>
 
-      </div>
-    
-      <p>Særlige grønne tilbud kun til forbrugspause-brugere</p>
-    </section>  
+  <h2>Få et smugkig på dine pointfordele</h2>
 
-    <style>
-.preview {
-  max-width: 430px;
-  margin: 20px auto;
-  padding: 20px;
-  background: var(--green);
-  border-radius: 14px;
-  text-align: center;
-}
+  <div class="preview-images">
+    <img src="/images/carousel.webp" alt="kaffe" />
+  </div>
 
-.preview p {
-  margin: 0;
-  font-size: var(--p);
-}
+  <p>Særlige grønne tilbud kun til forbrugspause-brugere</p>
+</section>
 
-.preview h2 {
-  margin: 10px 0 16px;
-  font-size: var(--h2);
-}
-
-/* “Scenen” til billedet */
-.preview-images {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 16px 0;
-}
-
-/* billedet */
-.preview-images img {
-  position: static;   
-  transform: none;     
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-
-@media (min-width: 700px) {
+<style>
   .preview {
-    max-width: 1100px;  
-    margin: 24px auto 40px;
-    padding: 40px 48px; 
+    max-width: 430px;
+    margin: 20px auto;
+    padding: 20px;
+    background: var(--green);
+    border-radius: 10px;
+    text-align: center;
   }
 
-  .preview-images img {
-    max-width: 900px;   
-    width: 100%;
+  .preview p {
+    margin: 0;
+    font-size: var(--p);
   }
-}
-    </style>
+
+  .preview h2 {
+    margin: 10px 0 16px;
+    font-size: var(--h2);
+  }
+
+  /* “Scenen” til billedet */
+  .preview-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px 0;
+  }
+
+  /* billedet */
+  .preview-images img {
+    position: static;
+    transform: none;
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  @media (min-width: 700px) {
+    .preview {
+      max-width: 1000px;
+      margin: 24px auto 40px;
+      padding: 40px 48px;
+      border-radius: 20px;
+    }
+
+    .preview-images img {
+      max-width: 900px;
+      width: 100%;
+    }
+  }
+</style>

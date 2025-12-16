@@ -1,60 +1,61 @@
 <section class="get-started">
-    <h2>Klar til din første forbrugspause?</h2>
-  
-    <p>
-      Log ind og se dine point - eller opret en konto og kom i gang med at optjene
-      forbrugspause-fordele med Dankort.
-    </p>
-  
-    <a href="#" class="get-started-btn">Log ind eller opret konto</a>
-  </section>
+  <h2>Klar til din første forbrugspause?</h2>
 
-  <style>
+  <p>Log ind og se dine point - eller opret en konto og kom i gang med at optjene forbrugspause-fordele med Dankort.</p>
 
-.get-started {
-  max-width: 430px;
-  margin: 20px auto;
-  padding: 28px 20px;
-  background: var(--green);
-  border-radius: 14px;
-  text-align: center;
-}
+  <a href="/forms" class="get-started-btn">Log ind eller opret konto</a>
+</section>
 
-.get-started h2 {
-  margin: 0 0 10px;
-  font-size: var(--h2);
-}
-
-.get-started p {
-  margin: 0 0 18px;
-  line-height: 1.45;
-  font-size: var(--p);
-}
-
-.get-started-btn {
-  display: inline-block;
-  background: var(--white);
-  color: var(--black);
-  text-decoration: none;
-  font-size: var(--btn);
-
-  padding: 10px 16px;
-  border-radius: 10px;
-  border: 1px solid var(--black);
-}
-
-@media (min-width: 700px) {
+<style>
   .get-started {
-    max-width: 1100px;   /* flugter med hero/why/how */
-    margin: 24px auto 40px;
-    padding: 40px 48px;  /* mere luft på desktop */
+    max-width: 430px;
+    margin: 20px auto;
+    padding: 28px 20px;
+    background: var(--green);
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .get-started h2 {
+    margin: 0 0 10px;
+    font-size: var(--h2);
   }
 
   .get-started p {
-    max-width: 70ch;     /* valgfrit: gør teksten mere læsbar */
-    margin-left: auto;
-    margin-right: auto;  /* bevarer centreret tekst */
+    margin: 0 0 18px;
+    line-height: 1.45;
+    font-size: var(--p);
   }
-}
 
-  </style>
+  .get-started-btn {
+    display: inline-block;
+    background: var(--white);
+    color: var(--black);
+    text-decoration: none;
+    font-size: var(--btn);
+
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: 1px solid var(--black);
+  }
+
+  .get-started-btn:hover {
+    background-color: var(--grey);
+  }
+
+  @media (min-width: 700px) {
+    .get-started {
+      max-width: 1000px; /* flugter med hero/why/how */
+      margin: 24px auto 40px;
+      padding: 40px 48px; /* mere luft på desktop */
+      margin-bottom: 100px;
+      border-radius: 20px;
+    }
+
+    .get-started p {
+      max-width: 70ch; /* valgfrit: gør teksten mere læsbar */
+      margin-left: auto;
+      margin-right: auto; /* bevarer centreret tekst */
+    }
+  }
+</style>

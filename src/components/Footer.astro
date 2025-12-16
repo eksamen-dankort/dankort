@@ -1,121 +1,122 @@
 <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-col">
-        <h4>Dankort</h4>
-        <p>Om Dankort</p>
-        <p>Presse</p>
-        <p>Logo og billeder</p>
-      </div>
-
-      <div class="footer-col">
-        <h4>Politikker</h4>
-        <p>Privatlivspolitikker</p>
-        <p>Cookies</p>
-        <p>AEE regulativ</p>
-      </div>
-
-      <div class="footer-col">
-        <h4>Support</h4>
-        <p>Kontakt salg</p>
-        <p>Kontakt kundeservice</p>
-        <p>Support erhverv</p>
-        <p>Support privat</p>
-      </div>
-
-      <div class="footer-col">
-        <h4 class="green">
-          Forbrugspause
-          <img src="/public/images/blad-logo.webp" alt="blad logo" class="green-icon" />
-        </h4>
-        <p>Vilkår og betingelser</p>
-        <p>Goder</p>
-      </div>
-
-      <div class="footer-logo">
-        <h2>
-          Når vi handler<br />
-          sammen
-        </h2>
-        <img src="/public/images/logo.webp" alt="Dankort" class="footer-dk-logo" />
-      </div>
+  <div class="footer-container">
+    <div class="footer-col">
+      <h4>Dankort</h4>
+      <p>Om Dankort</p>
+      <p>Presse</p>
+      <p>Logo og billeder</p>
     </div>
-  </footer>
-  <style>
-    .footer {
-  background: var(--grey);
-  padding: 50px 30px;
-}
 
-.footer-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px 60px;
-}
+    <div class="footer-col">
+      <h4>Politikker</h4>
+      <p>Privatlivspolitikker</p>
+      <p>Cookies</p>
+      <p>AEE regulativ</p>
+    </div>
 
-.footer-col h4 {
-  font-size: 15px;
-  margin-bottom: 12px;
-}
+    <div class="footer-col">
+      <h4>Support</h4>
+      <p>Kontakt salg</p>
+      <p>Kontakt kundeservice</p>
+      <p>Support erhverv</p>
+      <p>Support privat</p>
+    </div>
 
-.footer-col p {
-  font-size: 11px;
-  margin-bottom: 8px;
-}
+    <div class="footer-col">
+      <h4 class="green">
+        Forbrugspause
+        <img src="/public/images/blad-logo.webp" alt="blad logo" class="green-icon" />
+      </h4>
+      <p>Vilkår og betingelser</p>
+      <p>Goder</p>
+    </div>
 
-.footer-col p:hover{
+    <div class="footer-logo">
+      <h2>
+        Når vi handler<br />
+        sammen
+      </h2>
+      <a href="/">
+        <img src="/public/images/logo.webp" alt="Logo" class="footer-dk-logo" />
+      </a>
+    </div>
+  </div>
+</footer>
+<style>
+  .footer {
+    background: var(--grey);
+    padding: 50px 30px;
+  }
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 60px;
+  }
+
+  .footer-col h4 {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+
+  .footer-col p {
+    font-size: 11px;
+    margin-bottom: 8px;
+  }
+
+  .footer-col p:hover {
     text-decoration: underline;
     cursor: pointer;
   }
 
-.green {
-  color: rgb(171, 204, 125);
-}
+  .green {
+    color: rgb(171, 204, 125);
+  }
 
-.green-icon {
-  width: 17px;
-  margin-left: 6px;
-}
-
-.footer-logo {
-  grid-column: 1 / -2;
-}
-
-.footer-logo h2 {
-  font-size: 20px;
-  color: var(--red);
-}
-
-.footer-dk-logo {
-  width: 55px;
-}
-@media(min-width: 700px){
-
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    grid-template-columns: repeat(5, 1fr);
+  .green-icon {
+    width: 17px;
+    margin-left: 6px;
   }
 
   .footer-logo {
-    grid-column: auto;
-    text-align: right;
+    grid-column: 1 / -2;
   }
 
   .footer-logo h2 {
-    font-size: 26px;
+    font-size: 20px;
+    color: var(--red);
   }
 
   .footer-dk-logo {
-    width: 90px;
+    width: 55px;
   }
+  @media (min-width: 700px) {
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      grid-template-columns: repeat(5, 1fr);
+    }
 
-  .footer p {
-    font-size: 15px;
-  }
+    .footer-logo {
+      grid-column: auto;
+      text-align: right;
+    }
 
-  .footer-col p:hover{
-    text-decoration: underline;
-    cursor: pointer;
+    .footer-logo h2 {
+      font-size: 26px;
+    }
+
+    .footer-dk-logo {
+      width: 90px;
+    }
+
+    .footer p {
+      font-size: 15px;
+    }
+
+    .footer-col p:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
   }
-}
-  </style>
+</style>

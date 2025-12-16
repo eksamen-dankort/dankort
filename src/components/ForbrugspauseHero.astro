@@ -1,136 +1,131 @@
 <section class="hero">
+  <h1 class="hero-title">
+    <span class="green-highlight">Forbrugspause</span> med Dankort
+  </h1>
 
-    <h1 class="hero-title">
-        <span class="green-highlight">Forbrugspause</span> med Dankort
-      </h1>
-  
-    <p class="hero-subtitle">Lettere. Sjovere. Og meget mere grønt</p>
-  
-    <div class="hero-images">
-      <img src="/images/blad-logo.webp" alt="Grønt ikon" class="hero-icon" />
-  
-      <img
-        src="/images/phone-app.webp"
-        alt="Skærmbillede af Forbrugspause i appen"
-        class="hero-phone"
-      />
-    </div>
-  
-    <p class="hero-text">
-      Det skal være lettere og lidt sjovere at skrue ned for forbruget. Når du holder en
-      forbrugspause optjener du point i Dankort-appen, som kan bruges på diverse fordele.
-      På den måde sparer du både penge og gør noget godt for klimaet, uden at ændre hele
-      din hverdag.
-    </p>
-  </section>
-  
-  <style>
- .hero {
-  background: var(--grey);
-  border-radius: 14px;
-  padding: 20px;
-  text-align: center;
-  max-width: 430px;
-  margin: 20px auto;
+  <p class="hero-subtitle">Lettere. Sjovere. Og meget mere grønt</p>
 
-  /* gør det nemt at flytte elementer på desktop */
-  display: grid;
-  grid-template-columns: 1fr;
-}
+  <div class="hero-images">
+    <img src="/images/blad-logo.webp" alt="Grønt ikon" class="hero-icon" />
 
-.hero-title {
-  margin: 0 0 6px;
-  font-size: var(--h1);
-  font-weight: 700;
-  line-height: 1.15;
-}
+    <img src="/images/phone-app.webp" alt="Skærmbillede af Forbrugspause i appen" class="hero-phone" />
+  </div>
 
-.hero-subtitle {
-  margin: 0 0 14px;
-  font-size: 14px;
-}
+  <p class="hero-text">
+    Det skal være lettere og lidt sjovere at skrue ned for forbruget. Når du holder en forbrugspause optjener du point i Dankort-appen, som kan bruges på diverse fordele. På den måde sparer du både penge og gør noget godt for klimaet, uden at ændre
+    hele din hverdag.
+  </p>
+</section>
 
-.hero-icon,
-.hero-phone {
-  display: block;
-  height: auto;
-  max-width: none;
-}
-
-.hero-images {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin: 10px 0 14px;
-}
-
-/* Mobil størrelser */
-.hero-icon {
-  width: 70px;
-}
-
-.hero-phone {
-  width: 140px;
-}
-
-.hero-text {
-  margin: 0;
-  font-size: var(--p);
-  line-height: 1.45;
-}
-
-.green-highlight {
-  background: var(--green);
-  padding: 0 6px;
-  border-radius: 4px;
-}
-
-/* DESKTOP  */
-@media (min-width: 700px) {
+<style>
   .hero {
-    max-width: 1100px;
-    padding: 48px;
-    text-align: left;
+    background: var(--grey);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    max-width: 430px;
+    margin: 20px auto;
+    margin-top: 50px;
 
-    grid-template-columns: 1.15fr 0.85fr;
-    column-gap: 56px;
-    align-items: center;
+    /* gør det nemt at flytte elementer på desktop */
+    display: grid;
+    grid-template-columns: 1fr;
   }
 
-  /* Venstre kolonne */
-  .hero-title,
-  .hero-subtitle,
-  .hero-text {
-    grid-column: 1;
+  .hero-title {
+    margin: 0 0 6px;
+    font-size: var(--h1);
+    font-weight: 700;
+    line-height: 1.15;
   }
 
   .hero-subtitle {
-    font-size: 35px;
-    margin-bottom: 18px;
+    margin: 0 0 14px;
+    font-size: 14px;
   }
 
-  .hero-text {
-    max-width: 60ch;
+  .hero-icon,
+  .hero-phone {
+    display: block;
+    height: auto;
+    max-width: none;
   }
 
-  /* Højre kolonne (billeder) */
   .hero-images {
-    grid-column: 2;
-    grid-row: 1 / span 3; /* gør at billederne ligger “hele vejen oppe” ved siden af teksten */
-    justify-content: flex-end;
-    margin: 0;
-    gap: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 10px 0 14px;
   }
 
-  /* Desktop størrelser */
+  /* Mobil størrelser */
   .hero-icon {
-    width: clamp(90px, 10vw, 130px);
+    width: 70px;
   }
 
   .hero-phone {
-    width: clamp(220px, 22vw, 320px);
+    width: 140px;
   }
-}
-  </style>
-  
+
+  .hero-text {
+    margin: 0;
+    font-size: var(--p);
+    line-height: 1.45;
+  }
+
+  .green-highlight {
+    background: var(--green);
+    padding: 0 6px;
+    border-radius: 4px;
+  }
+
+  /* DESKTOP  */
+  @media (min-width: 700px) {
+    .hero {
+      max-width: 1000px;
+      padding: 48px;
+      text-align: left;
+      margin-top: 100px;
+
+      grid-template-columns: 1.15fr 0.85fr;
+      column-gap: 56px;
+      align-items: center;
+      border-radius: 20px;
+    }
+
+    /* Venstre kolonne */
+    .hero-title,
+    .hero-subtitle,
+    .hero-text {
+      grid-column: 1;
+    }
+
+    .hero-subtitle {
+      font-size: 35px;
+      margin-bottom: 18px;
+    }
+
+    .hero-text {
+      max-width: 60ch;
+    }
+
+    /* Højre kolonne (billeder) */
+    .hero-images {
+      grid-column: 2;
+      grid-row: 1 / span 3; /* gør at billederne ligger “hele vejen oppe” ved siden af teksten */
+      justify-content: flex-end;
+      margin: 0;
+      gap: 28px;
+    }
+
+    /* Desktop størrelser */
+    .hero-icon {
+      width: clamp(90px, 10vw, 130px);
+    }
+
+    .hero-phone {
+      width: clamp(220px, 22vw, 320px);
+    }
+  }
+</style>
