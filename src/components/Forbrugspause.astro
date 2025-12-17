@@ -1,72 +1,87 @@
-<section class="forbrugspause">
-  <div class="tekst-kolonne">
-    <h2><span class="highlight">Forbrugspause</span> med Dankort</h2>
+<section class="hero">
+  <h1 class="hero-title">
+    <span class="green-highlight">Forbrugspause</span> med Dankort
+  </h1>
 
-    <p class="sub">Tag en pause og optjen point.</p>
+  <p class="hero-subtitle">Tag en pause og optjen point</p>
 
-    <p>Hent Dankort appen, hvor du optjener point, hver gang du tager en forbrugspause og bliver belønnet.</p>
+  <div class="hero-images">
+    <img src="/images/blad-logo.webp" alt="Grønt ikon" class="hero-icon" />
 
-    <img src="/public/images/blad-logo.webp" alt="Grønt ikon" class="icon" />
-
-    <p class="bundtekst">Hent appen nu og gør Danmark grønnere med Dankort</p>
-
-    <a href="/forbrugspause">
-      <button class="btn">Se hvordan</button>
-    </a>
+    <img src="/images/phone-app.webp" alt="Skærmbillede af Forbrugspause i appen" class="hero-phone" />
   </div>
 
-  <div class="telefon-kolonne">
-    <img src="/public/images/phone-app.webp" alt="Telefon" class="telefon" />
-  </div>
+  <p class="hero-text">Hent Dankort appen, hvor du optjener point, hver gang du tager en forbrugspause og bliver belønnet.</p>
+
+  <a href="/forbrugspause">
+    <button class="btn">Se hvordan</button>
+  </a>
 </section>
 
 <style>
-  .forbrugspause {
-    padding: 20px;
-    margin: 20px auto;
+  .hero {
+    background: var(--grey);
     border-radius: 10px;
-    max-width: 400px;
-    background-color: var(--grey);
+    padding: 20px;
+    text-align: center;
+    max-width: 430px;
+    margin: 20px auto;
+    margin-top: 50px;
+
     display: grid;
     grid-template-columns: 1fr;
-    gap: 30px;
-    text-align: center;
-    margin-bottom: 50px;
   }
 
-  .tekst-kolonne {
+  .hero-title {
+    margin: 0 0 6px;
+    font-size: var(--h1);
+    font-weight: 700;
+    line-height: 1.15;
+  }
+
+  .hero-subtitle {
+    margin: 0 0 14px;
+    font-size: 14px;
+  }
+
+  .hero-icon,
+  .hero-phone {
+    display: block;
+    height: auto;
+    max-width: none;
+  }
+
+  .hero-images {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 10px 0 14px;
   }
 
-  .tekst-kolonne h2 {
-    font-size: var(--h2);
-    margin-bottom: 15px;
+  .hero-icon {
+    width: 70px;
   }
 
-  .sub {
-    font-size: 15px;
+  .hero-phone {
+    width: 140px;
   }
-  .tekst-kolonne p {
+
+  .hero-text,
+  .bundtekst {
+    margin: 0;
     font-size: var(--p);
-    line-height: 1.5;
-    margin: 10px 0;
-  }
-
-  .highlight {
-    background-color: var(--green);
-    padding: 4px 8px;
-    border-radius: 4px;
-  }
-
-  .icon {
-    max-width: 100px;
+    line-height: 1.45;
   }
 
   .bundtekst {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: -300px;
+  }
+
+  .green-highlight {
+    background: var(--green);
+    padding: 0 6px;
+    border-radius: 4px;
   }
 
   .btn {
@@ -76,65 +91,51 @@
     border-radius: 10px;
     font-size: var(--btn);
     cursor: pointer;
-    margin-top: 20px;
   }
 
   .btn:hover {
     background-color: var(--green);
   }
 
-  .telefon-kolonne {
-    display: flex;
-    justify-content: center;
-  }
-
-  .telefon {
-    max-width: 280px;
-    width: 100%;
-    height: auto;
-    border-radius: 20px;
-  }
-
   @media (min-width: 700px) {
-    .forbrugspause {
-      background-color: var(--grey);
-      padding: 60px;
-      border-radius: 20px;
+    .hero {
       max-width: 1000px;
-      margin: 40px auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      margin-bottom: 50px;
+      padding: 48px;
+      text-align: left;
+      margin-top: 100px;
+
+      grid-template-columns: 1.15fr 0.85fr;
+      column-gap: 56px;
+      /* align-items: center; */
+      align-items: start;
+      border-radius: 20px;
     }
 
-    .tekst-kolonne h2 {
-      font-size: var(--h2);
-      margin-bottom: 20px;
+    .hero-subtitle {
+      font-size: 35px;
+      margin-bottom: 18px;
+      margin-top: -130px;
     }
 
-    .highlight {
-      background-color: var(--green);
-      padding: 4px 8px;
-      border-radius: 4px;
+    .hero-text {
+      max-width: 60ch;
+      margin-top: -220px;
     }
 
-    .sub {
-      font-size: 30px;
-    }
-    .tekst-kolonne p {
-      font-size: var(--p);
-      line-height: 1.5;
-      max-width: 420px;
-    }
-
-    .icon {
-      max-width: 150px;
-      margin: 40px 0;
+    .hero-images {
+      grid-column: 2;
+      grid-row: 1 / span 3;
+      justify-content: flex-end;
+      margin: 0;
+      gap: 28px;
     }
 
-    .bundtekst {
-      margin-bottom: 20px;
+    .hero-icon {
+      width: clamp(90px, 10vw, 130px);
+    }
+
+    .hero-phone {
+      width: clamp(220px, 22vw, 320px);
     }
 
     .btn {
@@ -150,14 +151,16 @@
       background-color: var(--green);
     }
 
-    .telefon-kolonne {
-      display: flex;
-      justify-content: center;
+    .hero-title,
+    .hero-subtitle,
+    .hero-text,
+    .bundtekst,
+    .hero a {
+      grid-column: 1;
     }
 
-    .telefon {
-      max-width: 320px;
-      border-radius: 20px;
+    .hero a {
+      margin-top: 24px;
     }
   }
 </style>
