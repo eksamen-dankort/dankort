@@ -25,11 +25,9 @@ const { cafe } = Astro.props as { cafe: any };
 <Layout title={cafe?.name ?? "Café"}>
   <div class="cafe">
     <h1>{cafe?.name}</h1>
-    <p>{cafe?.description}</p>
 
     {cafe?.img ? <img src={cafe.img} alt={cafe?.name ?? "Café"} /> : <p>(Intet billede fundet)</p>}
-    <p>Her får du 10% på en valgfri kop kaffe, hvis du huser at medbringe din Dankort to-go kop.</p>
-    <p>Tak for at gøre hverdagen grønnere.</p>
+    <p>{cafe?.description}</p>
   </div>
   <div class="map">
     <gmp-map center="55.693176672735795,12.551243126788762" zoom="15" map-id="EK" style="height: 400px"><gmp-advanced-marker position="55.693176672735795,12.551243126788762" title="EK"></gmp-advanced-marker> </gmp-map>
